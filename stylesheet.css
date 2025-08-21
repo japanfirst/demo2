@@ -1,0 +1,183 @@
+/* 基本設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4; /* 明るいグレーの背景 */
+  color: #333; /* 文字色を濃いグレー */
+}
+
+/* ヒーローヘッダー（ビジュアル強調） */
+.hero {
+  background: url('hero.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明のオーバーレイで視認性を確保 */
+}
+
+.hero h1 {
+  font-size: 40px; /* ヘッダーのフォントサイズ */
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px; /* サブタイトルのフォントサイズ */
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #e63946; /* 支援ボタンの赤色 */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #d62828; /* ホバー時の色 */
+  transform: scale(1.05); /* ボタンのアニメーション */
+}
+
+/* セクションのスタイル */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff; /* 背景を白にして内容を目立たせる */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 柔らかなシャドウ */
+}
+
+section h2 {
+  font-size: 32px; /* 見出しフォントサイズ */
+  margin-bottom: 20px;
+  text-align: center;
+  color: #e63946; /* 見出しの色をブランドカラーに */
+}
+
+/* 画像カードセクション */
+.image-card-section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.image-card-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #e63946;
+}
+
+.image-card-container {
+  display: block;
+  margin-top: 20px;
+}
+
+.image-card {
+  position: relative;
+  width: 100%;  /* 1列に表示 */
+  border: 2px solid #ddd; /* 薄い枠線 */
+  border-radius: 10px; /* 丸みを持たせる */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* より強調された影 */
+  overflow: hidden; /* 画像がはみ出さないように */
+  margin-bottom: 30px;
+}
+
+.image-card img {
+  width: 100%; /* 画像を枠に合わせて拡大 */
+  height: auto;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* 半透明のオーバーレイ */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0; /* 初期状態では隠す */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-card:hover .image-overlay {
+  opacity: 1; /* ホバー時にオーバーレイが表示される */
+}
+
+.image-overlay h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.image-overlay p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/* リターン（支援プランカード） */
+.card-container {
+  display: block;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* カードのシャドウ */
+  text-align: center;
+  width: 100%;
+  background-color: #fafafa; /* カード背景色 */
+  margin-bottom: 30px;
+}
+
+.card h3 {
+  font-size: 24px; /* カード内見出し */
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 16px; /* カード内の説明文 */
+  margin-bottom: 15px;
+  color: #555; /* 薄い文字色 */
+}
+
+.card .price {
+  color: #e63946;
+  font-weight: bold;
+  font-size: 18px; /* 価格のフォントサイズ */
+}
+
+/* フッター */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+/* レスポンシブ対応（モバイル用調整） */
+@media (max-width: 768px) {
+  .image-card {
+    width: 100%; /* 画像カードも1列に */
+  }
+}
